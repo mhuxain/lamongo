@@ -8,5 +8,17 @@ This repo is an attempt to create a basic REST for MongoDB using laravel PHP
 * Install MongoDB PHP Drivers - Download [Windows DLL](https://pecl.php.net/package/mongodb) and copy to PHP ext folder and include file under extensions section of php.ini. See php documentation.
 * Install laravel
 ```Shell
-composer create-project laravel/laravel blog "5.1.*"
+composer create-project laravel/laravel lamongo "5.1.*" -vvv
 ```
+* Install laravel mongodb provider
+```Shell
+composer require jenssegers/mongodb -vvv
+```
+And add the service provider in config/app.php:
+```PHP
+Jenssegers\Mongodb\MongodbServiceProvider::class,
+```
+* Start MongoDB server
+* Start Laravel server
+* See route file for REST end points
+That should be it. You *may* need to create that database in MongoDB server
