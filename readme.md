@@ -18,7 +18,7 @@ And add the service provider in config/app.php:
 ```PHP
 Jenssegers\Mongodb\MongodbServiceProvider::class,
 ```
-* Start MongoDB server
-* Start Laravel server
-* See route file for REST end points
+* Start MongoDB server. In console cd to MongoDB install folder and run "mongod.exe". You can also add the install folder to PATH, this will allow you to start mongod from any location. Folder also has the Mongo client "mongo.exe" which you can use to test/troubleshoot db.
+* Start Laravel server. php artisan serve
+* See route file for REST end points and methods. eg POST jsong to <server>:<port>/<collection-name>/ to create new object in collection (new collection will be created if collection does not exist).
 That should be it. You *may* need to create that database in MongoDB server
